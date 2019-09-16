@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 3559091721421669372}
   - component: {fileID: 3559091721421669375}
   - component: {fileID: 3559091721421669373}
+  - component: {fileID: 1555563319}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -189,7 +190,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3559091721421669312}
-  m_LocalRotation: {x: -0, y: -0, z: -0.17606324, w: 0.9843789}
+  m_LocalRotation: {x: 0, y: 0, z: -0.17606258, w: 0.984379}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -280,10 +281,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab9534aaa3cd4f49b29d1226e8b7015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 6845399892640710492, guid: 84b57ebcecec61d4994920979ae722b3,
+    type: 3}
+  energyUI: {fileID: 0}
+  scoreText: {fileID: 0}
   moveSpeed: 3
   minXPosition: -2.5
   maxXPosition: 2.5
   maxEnergy: 10
+--- !u!114 &1555563319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3559091721421669312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6c6b4715178c54a9b0f21280183923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthUI: {fileID: 0}
+  maxHealth: 5
 --- !u!1 &3559091721595366530
 GameObject:
   m_ObjectHideFlags: 0

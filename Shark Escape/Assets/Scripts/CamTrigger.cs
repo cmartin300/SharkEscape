@@ -20,6 +20,6 @@ public class CamTrigger : MonoBehaviour
             Destroy(player.gameObject);
             Time.timeScale = 0.5f;
             Debug.Log("GameOver!");
-        }   
+        }
     }
 }

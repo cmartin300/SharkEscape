@@ -8,7 +8,11 @@ public class EnergyPickup : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        if (GameObject.FindGameObjectWithTag("Player") != null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        }
+        Destroy(gameObject, 20f);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
