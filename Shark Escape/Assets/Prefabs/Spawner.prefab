@@ -46,4 +46,6 @@ MonoBehaviour:
   pickups:
   - {fileID: 2778333474061594994, guid: 20632bbfb6d6d574cb6dbd3f42f7a65a, type: 3}
   - {fileID: 7358925147850990056, guid: d204c10c821f89a48ac6195cdfad202d, type: 3}
+  - {fileID: 2778333474061594994, guid: 20632bbfb6d6d574cb6dbd3f42f7a65a, type: 3}
+  - {fileID: 2778333474061594994, guid: 20632bbfb6d6d574cb6dbd3f42f7a65a, type: 3}
   startMaxTimeBtwSpawn: 4

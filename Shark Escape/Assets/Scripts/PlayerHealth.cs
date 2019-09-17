@@ -32,6 +32,11 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
+            if (player.GetComponent<PlayerMovement>().Score > PlayerPrefs.GetFloat("HighScore"))
+            {
+                PlayerPrefs.SetFloat("HighScore", player.GetComponent<PlayerMovement>().Score);
+            }
+            Debug.Log("HighScore: " + PlayerPrefs.GetFloat("HighScore"));
             Destroy(player.gameObject);
             Time.timeScale = 0.5f;
             Debug.Log("GameOver!");

@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public GameObject[] pickups;
     public float startMaxTimeBtwSpawn;
     float timeBtwSpawn;
+    float minTimeBtwSpawn = 1.5f;
 
     private void Awake()
     {
@@ -22,7 +23,14 @@ public class Spawner : MonoBehaviour
         {
             Instantiate(pickups[Random.Range(0, pickups.Length)], transform.position, Quaternion.identity);
             float newMaxTime = Random.Range(startMaxTimeBtwSpawn - 1, startMaxTimeBtwSpawn + 1);
-            timeBtwSpawn = newMaxTime;
+            if (newMaxTime > minTimeBtwSpawn)
+            {
+                timeBtwSpawn = newMaxTime;
+                startMaxTimeBtwSpawn *= 0.99f;
+            } else
+            {
+                timeBtwSpawn = minTimeBtwSpawn;
+            }
         }
     }
 }

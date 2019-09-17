@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float maxEnergy;
     private float energy;
     private float score;
+    public float Score { get => score; }
 
     private Animator anim;
 
@@ -45,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             energy -= Time.deltaTime;
             energyUI.fillAmount = energy / maxEnergy;
             score++;
-            scoreText.text = (score.ToString() + " m");
+            scoreText.text = (Score.ToString() + " m");
 
             if (transform.position.x >= minXPosition && transform.position.x <= maxXPosition)
                 transform.Translate(Vector2.down * moveSpeed * Time.deltaTime);
@@ -61,7 +62,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void ReplenishEnergy()
     {
-        energy = maxEnergy;
+        if (energy < maxEnergy)
+        {
+            energy += maxEnergy * .2f;
+            if (energy > maxEnergy)
+            {
+                energy = maxEnergy;
+            }
+        }
+
         energyUI.fillAmount = energy / maxEnergy;
     }
 }
