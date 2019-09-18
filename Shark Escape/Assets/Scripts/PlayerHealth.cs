@@ -21,7 +21,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void ReplenishHealth()
     {
-        health = maxHealth;
+        health += maxHealth / 5;
+        if (health > maxHealth)
+            health = maxHealth;
+
         healthUI.fillAmount = health / maxHealth;
     }
     

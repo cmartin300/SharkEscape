@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnergyPickup : MonoBehaviour
 {
-    private PlayerMovement player;
+    private PlayerHealth player;
 
     private void Start()
     {
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
-            player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         }
         Destroy(gameObject, 20f);
     }
@@ -18,7 +18,7 @@ public class EnergyPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            player.ReplenishEnergy();
+            player.ReplenishHealth();
             Destroy(gameObject);
         }
     }

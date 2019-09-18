@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -43,8 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5714f804e9ccb41bd6adbf103697a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 2778333474061594994, guid: 20632bbfb6d6d574cb6dbd3f42f7a65a, type: 3}
   pickups:
-  - {fileID: 2778333474061594994, guid: 20632bbfb6d6d574cb6dbd3f42f7a65a, type: 3}
   - {fileID: 7358925147850990056, guid: d204c10c821f89a48ac6195cdfad202d, type: 3}
-  - {fileID: 2778333474061594994, guid: 20632bbfb6d6d574cb6dbd3f42f7a65a, type: 3}
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   startMaxTimeBtwSpawn: 3
