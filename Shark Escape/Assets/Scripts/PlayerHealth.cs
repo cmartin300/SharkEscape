@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public Image healthUI;
-    [SerializeField] float maxHealth = 5;
+    [SerializeField] float maxHealth = 2f;
     private float health;
     private Transform player;
 
@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void ReplenishHealth()
     {
-        health += maxHealth / 5;
+        health += maxHealth / 2;
         if (health > maxHealth)
             health = maxHealth;
 

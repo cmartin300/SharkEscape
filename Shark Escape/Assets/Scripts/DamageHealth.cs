@@ -13,7 +13,7 @@ public class DamageHealth : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         }
-        Destroy(gameObject, 20f);
+        Destroy(gameObject, 6f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
